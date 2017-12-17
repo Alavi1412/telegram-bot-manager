@@ -1,0 +1,19 @@
+{
+  "name": "telegram-bot-manager",
+  "version": "1.0.0",
+  "description": "This is a package to help developers to connect to teelgram server and use telegram BOT API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alavi1412/telegram-bot-manager.git"
+  },
+  "author": "Seyed Mohammad Hassan Alavi <alavi_hassan@yahoo.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Alavi1412/telegram-bot-manager/issues"
+  },
+  "homepage": "https://github.com/Alavi1412/telegram-bot-manager#readme"
+}
