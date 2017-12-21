@@ -1,4 +1,5 @@
 {
+  "auhtor": "Seyed Mohammad Hassan Alavi",
   "name": "telegram-bot-manager",
   "version": "1.0.0",
   "description": "This is a package to help developers to connect to teelgram server and use telegram BOT API",
