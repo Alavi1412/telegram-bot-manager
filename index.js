@@ -30,7 +30,7 @@ class Bot {
             const req = https.request(options, (res) => {
                 res.setEncoding('utf8');
                 res.on('data', (chunk) => {
-                     resolve(JSON.parse(chunk));
+                    resolve(JSON.parse(chunk));
                 });
 
             });
@@ -46,8 +46,8 @@ class Bot {
             const options = this.createOptions("sendMessage");
 
             let data = {
-                chat_id     :       chat_id,
-                text        :       text
+                chat_id: chat_id,
+                text: text
 
             };
 
@@ -119,6 +119,35 @@ class Bot {
             });
 
             request.end(JSON.stringify(data));
+        });
+    }
+
+    async ForwardMessage(chat_id, from_chat_id, disable_notification, message_id) {
+
+        return new Promise((resolve, reject) => {
+            const options = this.createOptions("forwardMessage");
+            let data = {
+                chat_id: chat_id,
+                from_chat_id: from_chat_id,
+                message_id: message_id
+
+            };
+            if (typeof disable_notification !== 'undefined') {
+                data['disable_notification'] = disable_notification;
+            }
+            const req = https.request(options, (res) => {
+                res.setEncoding('utf8');
+                res.on('data', (chunk) => {
+                    resolve(JSON.parse(chunk));
+                });
+
+            });
+            req.on('error', (e) => {
+                reject(e);
+            });
+            req.end(JSON.stringify(data))
+
+
         });
     }
 }
