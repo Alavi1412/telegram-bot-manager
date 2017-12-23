@@ -4,4 +4,12 @@ List of methods:
 
 ### getMe
 
-return the bot Info
+Parameters: No Parameters
+
+Return: the bot Info
+
+### sendMessage
+
+Parameters: 
+
+chat_id => int
