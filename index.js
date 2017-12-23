@@ -122,7 +122,7 @@ class Bot {
         });
     }
 
-    async ForwardMessage(chat_id, from_chat_id, disable_notification, message_id) {
+    async ForwardMessage(chat_id, from_chat_id, message_id,disable_notification) {
 
         return new Promise((resolve, reject) => {
             const options = this.createOptions("forwardMessage");
