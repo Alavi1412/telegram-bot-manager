@@ -55,4 +55,97 @@ from_chat_id (*required*) :  Integer or String  ,\
 message_id (*required*) :  Integer  ,\
 disable_notification : Boolean
 
-Returns the sent message
+Returns  the sent Message
+
+### sendPhoto
+
+Input:
+
+chat_id (*required*) :  Integer or String ,\
+photo (*required*) : [InputFile](https://core.telegram.org/bots/api#inputfile) or String ,\
+caption : String ,\
+disable_notification : Boolean ,\
+reply_to_message_id : Integer ,\
+reply_markup : [InlineKeyboardMarkup](https://core.telegram.org/bots/api#inlinekeyboardmarkup) \
+or [ReplyKeyboardMarkup](https://core.telegram.org/bots/api#replykeyboardmarkup)  \
+or [ReplyKeyboardRemove](https://core.telegram.org/bots/api#replykeyboardremove) \
+or [ForceReply](https://core.telegram.org/bots/api#forcereply)
+
+Returns  the sent Message
+
+### sendAudio
+
+Input:
+
+chat_id (*required*) :  Integer or String ,\
+audio (*required*) : [InputFile](https://core.telegram.org/bots/api#inputfile) or String ,\
+caption : String ,\
+duration : Integer ,\
+performer : String ,\
+title	 : String ,\
+disable_notification : Boolean ,\
+reply_to_message_id : Integer ,\
+reply_markup : [InlineKeyboardMarkup](https://core.telegram.org/bots/api#inlinekeyboardmarkup) \
+or [ReplyKeyboardMarkup](https://core.telegram.org/bots/api#replykeyboardmarkup)  \
+or [ReplyKeyboardRemove](https://core.telegram.org/bots/api#replykeyboardremove) \
+or [ForceReply](https://core.telegram.org/bots/api#forcereply)
+
+
+Returns  the sent Message
+
+###sendDocument
+
+Input:
+
+chat_id (*required*) :  Integer or String ,\
+document (*required*) : [InputFile](https://core.telegram.org/bots/api#inputfile) or String ,\
+caption : String ,\
+disable_notification : Boolean ,\
+reply_to_message_id : Integer ,\
+reply_markup : [InlineKeyboardMarkup](https://core.telegram.org/bots/api#inlinekeyboardmarkup) \
+or [ReplyKeyboardMarkup](https://core.telegram.org/bots/api#replykeyboardmarkup)  \
+or [ReplyKeyboardRemove](https://core.telegram.org/bots/api#replykeyboardremove) \
+or [ForceReply](https://core.telegram.org/bots/api#forcereply)
+
+
+Returns  the sent Message
+
+###sendVideo
+
+Input:
+
+chat_id (*required*) :  Integer or String ,\
+video (*required*) : [InputFile](https://core.telegram.org/bots/api#inputfile) or String ,\
+duration : Integer ,\
+width : Integer ,\
+height : Integer ,\
+caption : String ,\
+disable_notification : Boolean ,\
+reply_to_message_id : Integer ,\
+reply_markup : [InlineKeyboardMarkup](https://core.telegram.org/bots/api#inlinekeyboardmarkup) \
+or [ReplyKeyboardMarkup](https://core.telegram.org/bots/api#replykeyboardmarkup)  \
+or [ReplyKeyboardRemove](https://core.telegram.org/bots/api#replykeyboardremove) \
+or [ForceReply](https://core.telegram.org/bots/api#forcereply)
+
+
+Returns  the sent Message
+
+###sendVoice
+
+Input:
+
+chat_id (*required*) :  Integer or String ,\
+voice (*required*) : [InputFile](https://core.telegram.org/bots/api#inputfile) or String ,\
+caption : String ,\
+duration : Integer ,\
+disable_notification : Boolean ,\
+reply_to_message_id : Integer ,\
+reply_markup : [InlineKeyboardMarkup](https://core.telegram.org/bots/api#inlinekeyboardmarkup) \
+or [ReplyKeyboardMarkup](https://core.telegram.org/bots/api#replykeyboardmarkup)  \
+or [ReplyKeyboardRemove](https://core.telegram.org/bots/api#replykeyboardremove) \
+or [ForceReply](https://core.telegram.org/bots/api#forcereply)
+
+
+Returns  the sent Message
+
+###

@@ -188,6 +188,51 @@ class Bot {
         });
 
     }
+    async sendVideo (params){           //TODO : testing
+        if (!params['chat_id']){
+            reject("chat_id is empty!");
+        }
+        if (!params['video']){
+            reject("video is empty!");
+        }
+        return new Promise((resolve, reject ) => {
+           const option = this.createOptions('sendVideo') ;
+           const req = https.request(option, (res) => {
+               res.setEncoding('utf8');
+               res.on('data', (chunk) => {
+                   resolve(JSON.parse(chunk));
+               });
+           });
+           req.on('error', (e) => {
+               reject(e);
+           });
+            req.end(JSON.stringify(params))
+        });
+    }
+    async sendVoice (params){              //TODO : testing
+        if (!params['chat_id']) {
+            reject("chat_id is empty!");
+        }
+        if (!params['voice']) {
+            reject("voice is empty!");
+        }
+        return new Promise((resolve, reject) => {
+            const option = this.createOptions('sendVoice');
+            const req = https.request(options, (res) => {
+                res.setEncoding('utf8');
+                res.on('data', (chunk) => {
+                    resolve(JSON.parse(chunk));
+                });
+            });
+            req.on('error', (e) => {
+                reject(e);
+
+            });
+            req.end(JSON.stringify(params))
+
+        });
+
+    }
 }
 
 

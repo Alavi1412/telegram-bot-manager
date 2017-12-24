@@ -23,21 +23,6 @@ const runningBot = setInterval( () => {
 }, 3000);
 
 function start(data) {
-    bot.sendMessage({
-         chat_id: 86951488,
-        // text: "test"
-    })
-        .then((result) => {
-            console.log(result);
-        });
-    bot.sendPhoto({
-        chat_id: 86951488,
-        photo: "https://thedevs.network/static/img/posts/build-a-telegram-bot-with-node.js/nodejs-reddit-bot-4.gif",
-        caption : "caption :)"
-        })
-        .then((x) => {
-            console.log(x);
-        });
 
     console.log(data);
 }
