@@ -8,14 +8,14 @@ An Instructor to implement this package on your code
 
 ### Prerequisites
 
-Nothing For NOW !!!
+NodeJS 8 or higher
 
 ### Installing
 
 run this code to install the package:
 
 ```
-npm install telegram-bot-manager
+npm install telegram-bot-manager --save
 ```
 
 ### Starting Coding

@@ -1,17 +1,40 @@
 ## Methods
+You should pass a JSON to methods exactly like telegrams documentation.\
+We have a small document of Methods we have implemented in this package.\
+Your JSON should have all *required* properties. 
 
-List of methods:
+### Example
+```
+bot.sendMessage({
+    chat_id: 7286390,
+    text: 'A TEST TEXT'
+    })
+    .then( (res) => {
+        // Do what You want with your result
+    });
+```
 
 ### getMe
 
 return the bot Info
 
+### getUpdates
+
+Input:
+
+offset : Integer ,\
+limit : Integer ,\
+timeout : Integer ,\
+allowed_updates : Array of Strings
+
+Returns an [UPDATE](https://core.telegram.org/bots/api#update) 
+
 ### sendMessage
 
-Parameters:
+Input:
 
-chat_id : Integer or String , \
-text : String ,\
+chat_id (*required*) :   Integer or String , \
+text (*required*) : String ,\
 reply_markup : [InlineKeyboardMarkup](https://core.telegram.org/bots/api#inlinekeyboardmarkup)\
 	           [ReplyKeyboardMarkup](https://core.telegram.org/bots/api#replykeyboardmarkup)\
 	           [ReplyKeyboardRemove](https://core.telegram.org/bots/api#replykeyboardremove)\
@@ -23,13 +46,13 @@ disable_notification : Boolean
 
 Returns the sent message
 
-### ForwardMessage
+### forwardMessage
 
-Parameters:
+Input:
 
-chat_id  :  Integer or String ,\
-from_chat_id  :  Integer or String  ,\
-message_id :  Integer  ,\
+chat_id (*required*) :  Integer or String ,\
+from_chat_id (*required*) :  Integer or String  ,\
+message_id (*required*) :  Integer  ,\
 disable_notification : Boolean
 
 Returns the sent message

@@ -41,35 +41,16 @@ class Bot {
         });
     }
 
-    async sendMessage(chat_id, text, reply_markup, reply_to_message_id, parse_mode, disable_web_page_preview = false, disable_notification = false) {
+    async sendMessage(params) {
         return new Promise((resolve, reject) => {
+            if (!params['chat_id'])
+            {
+                reject("chat_id is empty!");
+            }
+            if (!params['text']){
+                reject("text is empty!");
+            }
             const options = this.createOptions("sendMessage");
-
-            let data = {
-                chat_id: chat_id,
-                text: text
-
-            };
-
-            if (typeof reply_markup !== 'undefined') {
-                data['reply_markup'] = reply_markup;
-            }
-
-            if (typeof reply_to_message_id !== 'undefined') {
-                data['reply_to_message_id'] = reply_to_message_id;
-            }
-
-            if (typeof parse_mode !== 'undefined') {
-                data['parse_mode'] = parse_mode;
-            }
-
-            if (typeof disable_web_page_preview !== 'undefined') {
-                data['disable_web_page_preview'] = disable_web_page_preview;
-            }
-
-            if (typeof disable_notification !== 'undefined') {
-                data['disable_notification'] = disable_notification;
-            }
 
             const req = https.request(options, (res) => {
                 res.setEncoding('utf8');
@@ -81,29 +62,12 @@ class Bot {
             req.on('error', (e) => {
                 reject(e);
             });
-            req.end(JSON.stringify(data))
+            req.end(JSON.stringify(params))
         });
     }
 
-    async getUpdates(offset, limit, timeout, allowed_updates) {
+    async getUpdates(params) {
         return new Promise((resolve, reject) => {
-            let data = {};
-
-            if (typeof offset !== 'undefined') {
-                data['offset'] = offset;
-            }
-
-            if (typeof limit !== 'undefined') {
-                data['limit'] = limit;
-            }
-
-            if (typeof timeout !== 'undefined') {
-                data['timeout'] = timeout;
-            }
-
-            if (typeof allowed_updates !== 'undefined') {
-                data['allowed_updates'] = allowed_updates;
-            }
 
             const options = this.createOptions("getUpdates");
 
@@ -118,23 +82,24 @@ class Bot {
                 reject(e);
             });
 
-            request.end(JSON.stringify(data));
+            request.end(JSON.stringify(params));
         });
     }
 
-    async ForwardMessage(chat_id, from_chat_id, message_id,disable_notification) {
+    async forwardMessage(params) {
+        if (!params['chat_id']){
+            reject("chat_id is empty!");
+        }
+        if (!params['from_chat_id']){
+            reject("from_chat_id is empty!");
+        }
+        if (!params['message_id']){
+            reject("message_id is empty");
+        }
 
         return new Promise((resolve, reject) => {
             const options = this.createOptions("forwardMessage");
-            let data = {
-                chat_id: chat_id,
-                from_chat_id: from_chat_id,
-                message_id: message_id
 
-            };
-            if (typeof disable_notification !== 'undefined') {
-                data['disable_notification'] = disable_notification;
-            }
             const req = https.request(options, (res) => {
                 res.setEncoding('utf8');
                 res.on('data', (chunk) => {
@@ -145,11 +110,86 @@ class Bot {
             req.on('error', (e) => {
                 reject(e);
             });
-            req.end(JSON.stringify(data))
+            req.end(JSON.stringify(params))
 
 
         });
     }
+
+    async sendPhoto(params){
+        if (!params['chat_id']){
+            reject("chat_id is empty!");
+        }
+        if (!params['photo']){
+            reject("photo is empty");
+        }
+        return new Promise((resolve, reject) => {
+            const options = this.createOptions("sendPhoto");
+
+           const req = https.request(options, (res) => {
+               res.setEncoding('utf8');
+               res.on('data', (chunk) => {
+                   resolve(JSON.parse(chunk));
+               });
+           });
+            req.on('error', (e) => {
+                reject (e);
+           });
+        req.end(JSON.stringify(params))
+
+    });
+
+
+    }
+
+    async sendAudio(params) {            // TODO : testing
+        if (!params['chat_id']) {
+            reject("chat_id is empty!");
+        }
+        if (!params['audio']) {
+            reject("audio is empty!");
+        }
+        return new Promise((resolve, reject) => {
+            const option = this.createOptions('sendAudio');
+            const req = https.request(options, (res) => {
+                res.setEncoding('utf8');
+                res.on('data', (chunk) => {
+                    resolve(JSON.parse(chunk));
+                });
+            });
+            req.on('error', (e) => {
+                reject(e);
+
+            });
+            req.end(JSON.stringify(params))
+
+        });
+    }
+
+    async sendDocument (params){            //TODO : testing
+        if(!params['chat_id']){
+            reject("chat_id is empty!");
+        }
+        if(!params['document']){
+            reject("document is empty!");
+        }
+        return new Promise((resolve , reject) => {
+            const option = this.createOptions('sendDocument');
+            const req = https.request(option, (res) => {
+                res.setEncoding('utf8');
+                res.on('data',(chunk) => {
+                    resolve(JSON.parse(chunk));
+                });
+            });
+            req.on('error', (e) => {
+                reject(e);
+        });
+            req.end(JSON.stringify(params))
+
+    });
+
 }
+
+
 
 module.exports = Bot;
