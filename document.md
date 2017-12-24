@@ -130,7 +130,7 @@ or [ForceReply](https://core.telegram.org/bots/api#forcereply)
 
 Returns  the sent Message
 
-###sendVoice
+### sendVoice
 
 Input:
 
@@ -146,6 +146,16 @@ or [ReplyKeyboardRemove](https://core.telegram.org/bots/api#replykeyboardremove)
 or [ForceReply](https://core.telegram.org/bots/api#forcereply)
 
 
-Returns  the sent Message
+Returns the sent Message
 
-###
+### [answerCallbackQuery](https://core.telegram.org/bots/api#answercallbackquery)
+
+Input:
+
+callback_query_id (*required*) : String ,\
+text : String ,\
+show_alert : Boolean ,\
+url : String ,\
+cache_time : Integer
+
+Returns Boolean
