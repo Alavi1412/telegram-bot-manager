@@ -43,11 +43,10 @@ class Bot {
 
     async sendMessage(params) {
         return new Promise((resolve, reject) => {
-            if (!params['chat_id'])
-            {
+            if (!params['chat_id']) {
                 reject("chat_id is empty!");
             }
-            if (!params['text']){
+            if (!params['text']) {
                 reject("text is empty!");
             }
             const options = this.createOptions("sendMessage");
@@ -87,13 +86,13 @@ class Bot {
     }
 
     async forwardMessage(params) {
-        if (!params['chat_id']){
+        if (!params['chat_id']) {
             reject("chat_id is empty!");
         }
-        if (!params['from_chat_id']){
+        if (!params['from_chat_id']) {
             reject("from_chat_id is empty!");
         }
-        if (!params['message_id']){
+        if (!params['message_id']) {
             reject("message_id is empty");
         }
 
@@ -116,28 +115,28 @@ class Bot {
         });
     }
 
-    async sendPhoto(params){
-        if (!params['chat_id']){
+    async sendPhoto(params) {
+        if (!params['chat_id']) {
             reject("chat_id is empty!");
         }
-        if (!params['photo']){
+        if (!params['photo']) {
             reject("photo is empty");
         }
         return new Promise((resolve, reject) => {
             const options = this.createOptions("sendPhoto");
 
-           const req = https.request(options, (res) => {
-               res.setEncoding('utf8');
-               res.on('data', (chunk) => {
-                   resolve(JSON.parse(chunk));
-               });
-           });
+            const req = https.request(options, (res) => {
+                res.setEncoding('utf8');
+                res.on('data', (chunk) => {
+                    resolve(JSON.parse(chunk));
+                });
+            });
             req.on('error', (e) => {
-                reject (e);
-           });
-        req.end(JSON.stringify(params))
+                reject(e);
+            });
+            req.end(JSON.stringify(params))
 
-    });
+        });
 
 
     }
@@ -166,30 +165,30 @@ class Bot {
         });
     }
 
-    async sendDocument (params){            //TODO : testing
-        if(!params['chat_id']){
+    async sendDocument(params) {            //TODO : testing
+        if (!params['chat_id']) {
             reject("chat_id is empty!");
         }
-        if(!params['document']){
+        if (!params['document']) {
             reject("document is empty!");
         }
-        return new Promise((resolve , reject) => {
+        return new Promise((resolve, reject) => {
             const option = this.createOptions('sendDocument');
             const req = https.request(option, (res) => {
                 res.setEncoding('utf8');
-                res.on('data',(chunk) => {
+                res.on('data', (chunk) => {
                     resolve(JSON.parse(chunk));
                 });
             });
             req.on('error', (e) => {
                 reject(e);
-        });
+            });
             req.end(JSON.stringify(params))
 
-    });
+        });
 
+    }
 }
-
 
 
 module.exports = Bot;
