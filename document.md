@@ -148,6 +148,20 @@ or [ForceReply](https://core.telegram.org/bots/api#forcereply)
 
 Returns the sent Message
 
+### [editMessageText](https://core.telegram.org/bots/api#editmessagetext)
+
+Input:
+
+chat_id :  Integer or String ,\
+message_id : Integer ,\
+inline_message_id : Integer ,\
+test : String ,\
+parse_mode : String ,\
+disable_web_page_preview : Boolean ,\
+reply_markup : [InlineKeyboardMarkup](https://core.telegram.org/bots/api#inlinekeyboardmarkup)
+
+Returns the sent Message Or Boolean. (check Telegram)
+
 ### [answerCallbackQuery](https://core.telegram.org/bots/api#answercallbackquery)
 
 Input:

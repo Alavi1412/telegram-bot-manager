@@ -231,10 +231,36 @@ class Bot {
                 reject(e);
 
             });
-            req.end(JSON.stringify(params))
+            req.end(JSON.stringify(params));
 
         });
 
+    }
+
+    async editMessageText (params) {
+        return new Promise((resolve, reject) => {
+            if (!params['chat_id']) {
+                reject("chat_id is empty!");
+            }
+            if (!params['message_id']) {
+                reject("message_id is empty!");
+            }
+            if (!params['text']) {
+                reject("text is empty!");
+            }
+            const options = this.createOptions('editMessageText');
+            const req = https.request(options, (res) => {
+                res.setEncoding('utf8');
+                res.on('data', (chunk) => {
+                    resolve(JSON.parse(chunk));
+                });
+            });
+            req.on('error', (e) => {
+                reject(e);
+
+            });
+            req.end(JSON.stringify(params));
+        });
     }
 
     async answerCallbackQuery(params){
