@@ -14,11 +14,11 @@ bot.sendMessage({
     });
 ```
 
-### getMe
+### [getMe](https://core.telegram.org/bots/api#getme)
 
 return the bot Info
 
-### getUpdates
+### [getUpdates](https://core.telegram.org/bots/api#getupdates)
 
 Input:
 
@@ -29,7 +29,7 @@ allowed_updates : Array of Strings
 
 Returns an [UPDATE](https://core.telegram.org/bots/api#update) 
 
-### sendMessage
+### [sendMessage](https://core.telegram.org/bots/api#sendmessage)
 
 Input:
 
@@ -46,7 +46,7 @@ disable_notification : Boolean
 
 Returns the sent message
 
-### forwardMessage
+### [forwardMessage](https://core.telegram.org/bots/api#forwardmessage)
 
 Input:
 
@@ -57,7 +57,7 @@ disable_notification : Boolean
 
 Returns  the sent Message
 
-### sendPhoto
+### [sendPhoto](https://core.telegram.org/bots/api#sendphoto)
 
 Input:
 
@@ -73,7 +73,7 @@ or [ForceReply](https://core.telegram.org/bots/api#forcereply)
 
 Returns  the sent Message
 
-### sendAudio
+### [sendAudio](https://core.telegram.org/bots/api#sendaudio)
 
 Input:
 
@@ -93,7 +93,7 @@ or [ForceReply](https://core.telegram.org/bots/api#forcereply)
 
 Returns  the sent Message
 
-###sendDocument
+###[sendDocument](https://core.telegram.org/bots/api#senddocument)
 
 Input:
 
@@ -110,7 +110,7 @@ or [ForceReply](https://core.telegram.org/bots/api#forcereply)
 
 Returns  the sent Message
 
-###sendVideo
+###[sendVideo](https://core.telegram.org/bots/api#sendvideo)
 
 Input:
 
@@ -130,7 +130,7 @@ or [ForceReply](https://core.telegram.org/bots/api#forcereply)
 
 Returns  the sent Message
 
-### sendVoice
+### [sendVoice](https://core.telegram.org/bots/api#sendvoice)
 
 Input:
 
@@ -173,3 +173,119 @@ url : String ,\
 cache_time : Integer
 
 Returns Boolean
+
+### [sendVideoNote](https://core.telegram.org/bots/api#sendvideonote)
+
+Input:
+
+chat_id (*required*) :  Integer or String ,\
+video_note (*required*) : [InputFile](https://core.telegram.org/bots/api#inputfile) or String ,\
+duration : Integer ,\
+length : Integer ,\
+caption : String ,\
+disable_notification : Boolean ,\
+reply_to_message_id : Integer ,\
+reply_markup : [InlineKeyboardMarkup](https://core.telegram.org/bots/api#inlinekeyboardmarkup) \
+or [ReplyKeyboardMarkup](https://core.telegram.org/bots/api#replykeyboardmarkup)  \
+or [ReplyKeyboardRemove](https://core.telegram.org/bots/api#replykeyboardremove) \
+or [ForceReply](https://core.telegram.org/bots/api#forcereply)
+
+Returns the sent Message
+
+### [sendMediaGroup](https://core.telegram.org/bots/api#sendmediagroup)
+
+Input:
+
+chat_id (*required*) :  Integer or String ,\
+media (*required*) : Arrays of [InputMedia](https://core.telegram.org/bots/api#inputmedia)
+disable_notification : Boolean ,\
+reply_to_message_id : Integer ,\
+
+Returns the sent Message
+
+
+###[sendLocation](https://core.telegram.org/bots/api#sendlocation)
+
+Input:
+
+chat_id (*required*) :  Integer or String ,\
+latitude (*required*) :  Float number ,\
+longitude (*required*) :  Float number ,\
+live_period : Integer ,\
+length : Integer ,\
+disable_notification : Boolean ,\
+reply_to_message_id : Integer ,\
+reply_markup : [InlineKeyboardMarkup](https://core.telegram.org/bots/api#inlinekeyboardmarkup) \
+or [ReplyKeyboardMarkup](https://core.telegram.org/bots/api#replykeyboardmarkup)  \
+or [ReplyKeyboardRemove](https://core.telegram.org/bots/api#replykeyboardremove) \
+or [ForceReply](https://core.telegram.org/bots/api#forcereply)
+
+Returns the sent Message
+
+###[editMessageLiveLocation](https://core.telegram.org/bots/api#editmessagelivelocation)
+
+Input:
+
+latitude (*required*) :  Float number ,\
+longitude (*required*) :  Float number ,\
+chat_id :  Integer or String ,\
+message_id  :  Integer ,\
+inline_message_id : String ,\
+reply_markup : [InlineKeyboardMarkup](https://core.telegram.org/bots/api#inlinekeyboardmarkup) \
+or [ReplyKeyboardMarkup](https://core.telegram.org/bots/api#replykeyboardmarkup)  \
+or [ReplyKeyboardRemove](https://core.telegram.org/bots/api#replykeyboardremove) \
+or [ForceReply](https://core.telegram.org/bots/api#forcereply)
+
+Returns the edited Message
+
+###[stopMessageLiveLocation](https://core.telegram.org/bots/api#stopmessagelivelocation)
+
+Input:
+
+chat_id :  Integer or String ,\
+message_id  :  Integer ,\
+inline_message_id : String ,\
+reply_markup : [InlineKeyboardMarkup](https://core.telegram.org/bots/api#inlinekeyboardmarkup) \
+or [ReplyKeyboardMarkup](https://core.telegram.org/bots/api#replykeyboardmarkup)  \
+or [ReplyKeyboardRemove](https://core.telegram.org/bots/api#replykeyboardremove) \
+or [ForceReply](https://core.telegram.org/bots/api#forcereply)
+
+Returns the sent Message
+
+###[sendVenue](https://core.telegram.org/bots/api#sendvenue)
+
+Input:
+
+chat_id :  Integer or String ,\
+latitude (*required*) :  Float number ,\
+longitude (*required*) :  Float number ,\
+title (*required*) : String ,\
+address (*required*) :String ,\
+foursquare_id : String ,\
+disable_notification : Boolean ,\
+reply_to_message_id : Integer ,\
+reply_markup : [InlineKeyboardMarkup](https://core.telegram.org/bots/api#inlinekeyboardmarkup) \
+or [ReplyKeyboardMarkup](https://core.telegram.org/bots/api#replykeyboardmarkup)  \
+or [ReplyKeyboardRemove](https://core.telegram.org/bots/api#replykeyboardremove) \
+or [ForceReply](https://core.telegram.org/bots/api#forcereply)
+
+Returns the sent Message
+
+###[sendContact](https://core.telegram.org/bots/api#sendcontact)
+
+Input:
+
+chat_id :  Integer or String ,\
+phone_number (*required*) :  String ,\
+first_name (*required*) : String ,\
+last_name : String ,\
+disable_notification : Boolean ,\
+reply_to_message_id : Integer ,\
+reply_markup : [InlineKeyboardMarkup](https://core.telegram.org/bots/api#inlinekeyboardmarkup) \
+or [ReplyKeyboardMarkup](https://core.telegram.org/bots/api#replykeyboardmarkup)  \
+or [ReplyKeyboardRemove](https://core.telegram.org/bots/api#replykeyboardremove) \
+or [ForceReply](https://core.telegram.org/bots/api#forcereply)
+
+Returns the sent Message
+
+###[sendChatAction](https://core.telegram.org/bots/api#sendchataction)
