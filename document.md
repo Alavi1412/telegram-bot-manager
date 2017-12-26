@@ -291,3 +291,25 @@ Returns the sent Message
 ###[sendChatAction](https://core.telegram.org/bots/api#sendchataction)
 
 Input:
+
+chat_id (*required*) :  Integer or String ,\
+action (*required*) :  String ,\
+
+Returns Boolean
+
+
+###[getUserProfilePhotos](https://core.telegram.org/bots/api#getuserprofilephotos)
+
+Input:
+
+user_id (*required*) :  Integer ,\
+offset : Integer ,\
+limit : Integer ,\
+
+Returns a UserProfilePhotos object
+
+
+###[getFile](https://core.telegram.org/bots/api#getfile)
+
+Input:
+
