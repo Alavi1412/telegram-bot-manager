@@ -931,7 +931,32 @@ class Bot {
         });
     }
 
+    async deleteMessage(params){
+        return new Promise((resolve , reject) => {
+            if (!params['chat_id']) {
+                reject("chat_id is empty!");
+            }
+            if (!params['message_id']) {
+                reject("message_id is empty!");
+            }
+            const options = this.createOptions('deleteMessage');
+            const req = https.request(options , (res) => {
+                res.setEncoding('utf8');
+                res.on('data' , (chunk) => {
+                    resolve(JSON.parse(chunk));
+                });
+            });
+            req.on('error' , (e) => {
+                reject (e);
+            });
+            req.end(JSON.stringify(params));
+        });
+    }
+
+
 }
+
+
 
 
 module.exports = Bot;
