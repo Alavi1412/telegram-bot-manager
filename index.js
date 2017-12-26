@@ -526,7 +526,7 @@ class Bot {
             req.on('error', (e) => {
                 reject (e);
             });
-            req.end(JSON.stringify(params);)
+            req.end(JSON.stringify(params));
         });
     }
 
