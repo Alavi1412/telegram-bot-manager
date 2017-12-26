@@ -289,3 +289,5 @@ or [ForceReply](https://core.telegram.org/bots/api#forcereply)
 Returns the sent Message
 
 ###[sendChatAction](https://core.telegram.org/bots/api#sendchataction)
+
+Input:
