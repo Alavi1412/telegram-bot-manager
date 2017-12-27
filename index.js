@@ -237,7 +237,7 @@ class Bot {
 
     }
 
-    async editMessageText (params) {
+    async editMessageText (params) {            //TODO : essential check
         return new Promise((resolve, reject) => {
             if (!params['chat_id']) {
                 reject("chat_id is empty!");
@@ -344,8 +344,8 @@ class Bot {
             if(!params['chat_id']){
                 reject("chat_id is empty!");
             }
-            if(!params['latitude']){
-                reject("latitude is empty!");
+            if(!params['longitude']){
+                reject("longitude is empty!");
             }
             if(!params['latitude']){
                 reject("latitude is empty!");
