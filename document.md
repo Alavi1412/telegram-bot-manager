@@ -152,10 +152,10 @@ Returns the sent Message
 
 Input:
 
+text  (*required*) : String ,\
 chat_id :  Integer or String ,\
 message_id : Integer ,\
 inline_message_id : Integer ,\
-test : String ,\
 parse_mode : String ,\
 disable_web_page_preview : Boolean ,\
 reply_markup : [InlineKeyboardMarkup](https://core.telegram.org/bots/api#inlinekeyboardmarkup)
@@ -350,6 +350,191 @@ chat_id (*required*) :  Integer or String ,\
 user_id (*required*) :  Integer  ,\
 until_date : Integer  ,\
 can_send_messages : Boolean ,\
-can_send_media_messages : Boolean 
-can_send_other_messages : Boolean
-can_add_web_page_previews : Boolean
+can_send_media_messages : Boolean  ,\
+can_send_other_messages : Boolean ,\
+can_add_web_page_previews : Boolean ,\
+
+
+Returns Boolean
+
+
+###[promoteChatMember](https://core.telegram.org/bots/api#promotechatmember)
+
+
+Input:
+
+chat_id (*required*) :  Integer or String ,\
+user_id (*required*) :  Integer  ,\
+can_change_info :  Boolean ,\
+can_post_messages : Boolean ,\
+can_edit_messages : Boolean ,\
+can_delete_messages : Boolean ,\
+can_invite_users : Boolean ,\
+can_restrict_members : Boolean ,\
+can_pin_messages : Boolean ,\
+can_promote_members : Boolean ,\
+
+
+Returns Boolean
+
+###[exportChatInviteLink](https://core.telegram.org/bots/api#exportchatinvitelink)
+
+Input:
+
+chat_id (*required*) :  Integer or String ,\
+
+Returns String
+
+
+###[setChatPhoto](https://core.telegram.org/bots/api#setchatphoto)
+
+Input:
+
+chat_id (*required*) :  Integer or String ,\
+photo (*required*) :  [InputFile](https://core.telegram.org/bots/api#inputfile)  ,\
+
+
+Returns Boolean
+
+###[deleteChatPhoto](https://core.telegram.org/bots/api#deletechatphoto)
+
+Input:
+
+chat_id (*required*) :  Integer or String ,\
+
+Returns Boolean
+
+###[setChatTitle](https://core.telegram.org/bots/api#setchattitle)
+
+Input:
+
+chat_id (*required*) :  Integer or String ,\
+title (*required*) :  String  ,\
+
+Returns Boolean
+
+
+###[setChatDescription](https://core.telegram.org/bots/api#setchatdescription)
+
+Input:
+
+chat_id (*required*) :  Integer or String ,\
+description :  String  ,\
+
+
+Returns Boolean
+
+
+###[pinChatMessage](https://core.telegram.org/bots/api#pinchatmessage)
+
+Input:
+
+chat_id (*required*) :  Integer or String ,\
+message_id (*required*) :  Integer  ,\
+disable_notification : Boolean   ,\
+
+Returns Boolean
+
+###[unpinChatMessage](https://core.telegram.org/bots/api#unpinchatmessage)
+
+Input:
+
+chat_id (*required*) :  Integer or String ,\
+
+Returns Boolean
+
+
+###[leaveChat](https://core.telegram.org/bots/api#leavechat)
+
+Input:
+
+chat_id (*required*) :  Integer or String ,\
+
+
+Returns Boolean
+
+###[getChat](https://core.telegram.org/bots/api#getchat)
+
+Input:
+
+chat_id (*required*) :  Integer or String ,\
+
+Returns a [Chat](https://core.telegram.org/bots/api#chat) object
+
+###[getChatAdministrators](https://core.telegram.org/bots/api#getchatadministrators)
+
+Input:
+
+chat_id (*required*) :  Integer or String ,\
+
+Returns an Array of [ChatMember](https://core.telegram.org/bots/api#chatmember) objects
+
+###[getChatMembersCount](https://core.telegram.org/bots/api#getchatmemberscount)
+
+Input:
+
+chat_id (*required*) :  Integer or String ,\
+
+Returns Integer
+
+###[getChatMember](https://core.telegram.org/bots/api#getchatmember)
+
+Input:
+
+chat_id (*required*) :  Integer or String ,\
+user_id (*required*) :  Integer  ,\
+
+
+Returns a [ChatMember](https://core.telegram.org/bots/api#chatmember) object
+
+###[setChatStickerSet](https://core.telegram.org/bots/api#setchatstickerset)
+
+Input:
+
+chat_id (*required*) :  Integer or String ,\
+sticker_set_name (*required*) :  String ,\
+
+Returns Boolean
+
+###[deleteChatStickerSet](https://core.telegram.org/bots/api#deletechatstickerset)
+
+Input:
+
+chat_id (*required*) :  Integer or String ,\
+
+Returns Boolean
+
+###[editMessageCaption](https://core.telegram.org/bots/api#editmessagecaption)
+
+Input:
+
+chat_id :  Integer or String ,\
+message_id : Integer ,\
+inline_message_id : Integer ,\
+caption : String ,\
+reply_markup : [InlineKeyboardMarkup](https://core.telegram.org/bots/api#inlinekeyboardmarkup)
+
+Returns Boolean
+
+###[editMessageReplyMarkup](https://core.telegram.org/bots/api#editmessagereplymarkup)
+
+Input:
+
+chat_id :  Integer or String ,\
+message_id : Integer ,\
+inline_message_id : Integer ,\
+reply_markup : [InlineKeyboardMarkup](https://core.telegram.org/bots/api#inlinekeyboardmarkup)
+
+Returns Boolean
+
+###[deleteMessage](https://core.telegram.org/bots/api#deletemessage)
+
+Input:
+
+chat_id (*required*) :  Integer or String ,\
+message_id (*required*) :  Integer  ,\
+
+Returns Boolean
+
+
+####[The   End](https://github.com/Alavi1412/telegram-bot-manager#readme)
