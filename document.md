@@ -313,3 +313,43 @@ Returns a UserProfilePhotos object
 
 Input:
 
+file_id (*required*) :  Integer ,\
+
+
+Returns a [File](https://core.telegram.org/bots/api#file) Object
+
+
+###[kickChatMember](https://core.telegram.org/bots/api#kickchatmember)
+
+Input:
+
+chat_id (*required*) :  Integer or String ,\
+user_id (*required*) :  Integer  ,\
+until_date : Integer  ,\
+
+Returns Boolean
+
+
+###[unbanChatMember](https://core.telegram.org/bots/api#unbanchatmember)
+
+Input:
+
+chat_id (*required*) :  Integer or String ,\
+user_id (*required*) :  Integer  ,\
+
+
+Returns Boolean
+
+
+###[restrictChatMember](https://core.telegram.org/bots/api#restrictchatmember)
+
+
+Input:
+
+chat_id (*required*) :  Integer or String ,\
+user_id (*required*) :  Integer  ,\
+until_date : Integer  ,\
+can_send_messages : Boolean ,\
+can_send_media_messages : Boolean 
+can_send_other_messages : Boolean
+can_add_web_page_previews : Boolean
