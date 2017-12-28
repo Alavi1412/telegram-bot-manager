@@ -93,7 +93,7 @@ or [ForceReply](https://core.telegram.org/bots/api#forcereply)
 
 Returns  the sent Message
 
-###[sendDocument](https://core.telegram.org/bots/api#senddocument)
+### [sendDocument](https://core.telegram.org/bots/api#senddocument)
 
 Input:
 
@@ -110,7 +110,7 @@ or [ForceReply](https://core.telegram.org/bots/api#forcereply)
 
 Returns  the sent Message
 
-###[sendVideo](https://core.telegram.org/bots/api#sendvideo)
+### [sendVideo](https://core.telegram.org/bots/api#sendvideo)
 
 Input:
 
@@ -204,7 +204,7 @@ reply_to_message_id : Integer ,\
 Returns the sent Message
 
 
-###[sendLocation](https://core.telegram.org/bots/api#sendlocation)
+### [sendLocation](https://core.telegram.org/bots/api#sendlocation)
 
 Input:
 
@@ -222,7 +222,7 @@ or [ForceReply](https://core.telegram.org/bots/api#forcereply)
 
 Returns the sent Message
 
-###[editMessageLiveLocation](https://core.telegram.org/bots/api#editmessagelivelocation)
+### [editMessageLiveLocation](https://core.telegram.org/bots/api#editmessagelivelocation)
 
 Input:
 
@@ -238,7 +238,7 @@ or [ForceReply](https://core.telegram.org/bots/api#forcereply)
 
 Returns the edited Message
 
-###[stopMessageLiveLocation](https://core.telegram.org/bots/api#stopmessagelivelocation)
+### [stopMessageLiveLocation](https://core.telegram.org/bots/api#stopmessagelivelocation)
 
 Input:
 
@@ -252,7 +252,7 @@ or [ForceReply](https://core.telegram.org/bots/api#forcereply)
 
 Returns the sent Message
 
-###[sendVenue](https://core.telegram.org/bots/api#sendvenue)
+### [sendVenue](https://core.telegram.org/bots/api#sendvenue)
 
 Input:
 
@@ -271,7 +271,7 @@ or [ForceReply](https://core.telegram.org/bots/api#forcereply)
 
 Returns the sent Message
 
-###[sendContact](https://core.telegram.org/bots/api#sendcontact)
+### [sendContact](https://core.telegram.org/bots/api#sendcontact)
 
 Input:
 
@@ -287,8 +287,8 @@ or [ReplyKeyboardRemove](https://core.telegram.org/bots/api#replykeyboardremove)
 or [ForceReply](https://core.telegram.org/bots/api#forcereply)
 
 Returns the sent Message
-
-###[sendChatAction](https://core.telegram.org/bots/api#sendchataction)
+ 
+### [sendChatAction](https://core.telegram.org/bots/api#sendchataction)
 
 Input:
 
@@ -298,7 +298,7 @@ action (*required*) :  String ,\
 Returns Boolean
 
 
-###[getUserProfilePhotos](https://core.telegram.org/bots/api#getuserprofilephotos)
+### [getUserProfilePhotos](https://core.telegram.org/bots/api#getuserprofilephotos)
 
 Input:
 
@@ -309,7 +309,7 @@ limit : Integer ,\
 Returns a UserProfilePhotos object
 
 
-###[getFile](https://core.telegram.org/bots/api#getfile)
+### [getFile](https://core.telegram.org/bots/api#getfile)
 
 Input:
 
@@ -319,7 +319,7 @@ file_id (*required*) :  Integer ,\
 Returns a [File](https://core.telegram.org/bots/api#file) Object
 
 
-###[kickChatMember](https://core.telegram.org/bots/api#kickchatmember)
+### [kickChatMember](https://core.telegram.org/bots/api#kickchatmember)
 
 Input:
 
@@ -330,7 +330,7 @@ until_date : Integer  ,\
 Returns Boolean
 
 
-###[unbanChatMember](https://core.telegram.org/bots/api#unbanchatmember)
+### [unbanChatMember](https://core.telegram.org/bots/api#unbanchatmember)
 
 Input:
 
@@ -341,7 +341,7 @@ user_id (*required*) :  Integer  ,\
 Returns Boolean
 
 
-###[restrictChatMember](https://core.telegram.org/bots/api#restrictchatmember)
+### [restrictChatMember](https://core.telegram.org/bots/api#restrictchatmember)
 
 
 Input:
@@ -358,7 +358,7 @@ can_add_web_page_previews : Boolean ,\
 Returns Boolean
 
 
-###[promoteChatMember](https://core.telegram.org/bots/api#promotechatmember)
+### [promoteChatMember](https://core.telegram.org/bots/api#promotechatmember)
 
 
 Input:
@@ -377,7 +377,7 @@ can_promote_members : Boolean ,\
 
 Returns Boolean
 
-###[exportChatInviteLink](https://core.telegram.org/bots/api#exportchatinvitelink)
+### [exportChatInviteLink](https://core.telegram.org/bots/api#exportchatinvitelink)
 
 Input:
 
@@ -386,7 +386,7 @@ chat_id (*required*) :  Integer or String ,\
 Returns String
 
 
-###[setChatPhoto](https://core.telegram.org/bots/api#setchatphoto)
+### [setChatPhoto](https://core.telegram.org/bots/api#setchatphoto)
 
 Input:
 
@@ -396,7 +396,7 @@ photo (*required*) :  [InputFile](https://core.telegram.org/bots/api#inputfile) 
 
 Returns Boolean
 
-###[deleteChatPhoto](https://core.telegram.org/bots/api#deletechatphoto)
+### [deleteChatPhoto](https://core.telegram.org/bots/api#deletechatphoto)
 
 Input:
 
@@ -404,7 +404,7 @@ chat_id (*required*) :  Integer or String ,\
 
 Returns Boolean
 
-###[setChatTitle](https://core.telegram.org/bots/api#setchattitle)
+### [setChatTitle](https://core.telegram.org/bots/api#setchattitle)
 
 Input:
 
@@ -414,7 +414,7 @@ title (*required*) :  String  ,\
 Returns Boolean
 
 
-###[setChatDescription](https://core.telegram.org/bots/api#setchatdescription)
+### [setChatDescription](https://core.telegram.org/bots/api#setchatdescription)
 
 Input:
 
@@ -425,7 +425,7 @@ description :  String  ,\
 Returns Boolean
 
 
-###[pinChatMessage](https://core.telegram.org/bots/api#pinchatmessage)
+### [pinChatMessage](https://core.telegram.org/bots/api#pinchatmessage)
 
 Input:
 
@@ -435,7 +435,7 @@ disable_notification : Boolean   ,\
 
 Returns Boolean
 
-###[unpinChatMessage](https://core.telegram.org/bots/api#unpinchatmessage)
+### [unpinChatMessage](https://core.telegram.org/bots/api#unpinchatmessage)
 
 Input:
 
@@ -444,7 +444,7 @@ chat_id (*required*) :  Integer or String ,\
 Returns Boolean
 
 
-###[leaveChat](https://core.telegram.org/bots/api#leavechat)
+### [leaveChat](https://core.telegram.org/bots/api#leavechat)
 
 Input:
 
@@ -453,7 +453,7 @@ chat_id (*required*) :  Integer or String ,\
 
 Returns Boolean
 
-###[getChat](https://core.telegram.org/bots/api#getchat)
+### [getChat](https://core.telegram.org/bots/api#getchat)
 
 Input:
 
@@ -461,7 +461,7 @@ chat_id (*required*) :  Integer or String ,\
 
 Returns a [Chat](https://core.telegram.org/bots/api#chat) object
 
-###[getChatAdministrators](https://core.telegram.org/bots/api#getchatadministrators)
+### [getChatAdministrators](https://core.telegram.org/bots/api#getchatadministrators)
 
 Input:
 
@@ -469,7 +469,7 @@ chat_id (*required*) :  Integer or String ,\
 
 Returns an Array of [ChatMember](https://core.telegram.org/bots/api#chatmember) objects
 
-###[getChatMembersCount](https://core.telegram.org/bots/api#getchatmemberscount)
+### [getChatMembersCount](https://core.telegram.org/bots/api#getchatmemberscount)
 
 Input:
 
@@ -477,7 +477,7 @@ chat_id (*required*) :  Integer or String ,\
 
 Returns Integer
 
-###[getChatMember](https://core.telegram.org/bots/api#getchatmember)
+### [getChatMember](https://core.telegram.org/bots/api#getchatmember)
 
 Input:
 
@@ -487,7 +487,7 @@ user_id (*required*) :  Integer  ,\
 
 Returns a [ChatMember](https://core.telegram.org/bots/api#chatmember) object
 
-###[setChatStickerSet](https://core.telegram.org/bots/api#setchatstickerset)
+### [setChatStickerSet](https://core.telegram.org/bots/api#setchatstickerset)
 
 Input:
 
@@ -496,7 +496,7 @@ sticker_set_name (*required*) :  String ,\
 
 Returns Boolean
 
-###[deleteChatStickerSet](https://core.telegram.org/bots/api#deletechatstickerset)
+### [deleteChatStickerSet](https://core.telegram.org/bots/api#deletechatstickerset)
 
 Input:
 
@@ -504,7 +504,7 @@ chat_id (*required*) :  Integer or String ,\
 
 Returns Boolean
 
-###[editMessageCaption](https://core.telegram.org/bots/api#editmessagecaption)
+### [editMessageCaption](https://core.telegram.org/bots/api#editmessagecaption)
 
 Input:
 
@@ -516,7 +516,7 @@ reply_markup : [InlineKeyboardMarkup](https://core.telegram.org/bots/api#inlinek
 
 Returns Boolean
 
-###[editMessageReplyMarkup](https://core.telegram.org/bots/api#editmessagereplymarkup)
+### [editMessageReplyMarkup](https://core.telegram.org/bots/api#editmessagereplymarkup)
 
 Input:
 
@@ -527,7 +527,7 @@ reply_markup : [InlineKeyboardMarkup](https://core.telegram.org/bots/api#inlinek
 
 Returns Boolean
 
-###[deleteMessage](https://core.telegram.org/bots/api#deletemessage)
+### [deleteMessage](https://core.telegram.org/bots/api#deletemessage)
 
 Input:
 
@@ -537,4 +537,4 @@ message_id (*required*) :  Integer  ,\
 Returns Boolean
 
 
-####[The   End](https://github.com/Alavi1412/telegram-bot-manager#readme)
+#### [The   End](https://github.com/Alavi1412/telegram-bot-manager#readme)
