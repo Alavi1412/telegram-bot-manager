@@ -537,4 +537,4 @@ message_id (*required*) :  Integer  ,\
 Returns Boolean
 
 
-#### [The   End](https://github.com/Alavi1412/telegram-bot-manager#readme)
+#### [The   End](https://core.telegram.org/bots/api)
