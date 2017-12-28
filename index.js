@@ -237,14 +237,8 @@ class Bot {
 
     }
 
-    async editMessageText (params) {            //TODO : essential check
+    async editMessageText (params) {
         return new Promise((resolve, reject) => {
-            if (!params['chat_id']) {
-                reject("chat_id is empty!");
-            }
-            if (!params['message_id']) {
-                reject("message_id is empty!");
-            }
             if (!params['text']) {
                 reject("text is empty!");
             }

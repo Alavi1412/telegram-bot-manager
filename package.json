@@ -2,7 +2,7 @@
   "auhtor": "Seyed Mohammad Hassan Alavi",
   "name": "telegram-bot-manager",
   "version": "1.0.107",
-  "description": "This is a package to help developers to connect to teelgram server and use telegram BOT API",
+  "description": "This is a package to help developers to connect to telegram server and use telegram BOT API",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
