@@ -27,3 +27,28 @@ const Bot = require('telegram-bot-manager')
 
 const bot = new Bot(<YOUR-TOKEN-AS-STRING>);
 ```
+
+### Running the tests
+
+use this code to send a message with your bot
+It should paste in start function 
+
+```
+bot.senMessage({
+chat_id : 12345678 ,            //your target chat_id
+text : "this a test bot"
+})
+    .then((result) => { 
+        console.log(result);
+    });
+```
+### Authors
+
+* [**Seyed Mohammad Hasan Alavi**](http://t.me/alavi1412)
+* [**Hossein Keramati Tavallaei**](http://t.me/hooo3eeen)
+
+### License
+This project is licensed under the MIT License.
+
+### Acknowledgments
+All of the telegram's bot developers.
