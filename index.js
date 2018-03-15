@@ -968,7 +968,381 @@ class Bot {
             req.end(JSON.stringify(params));
         });
     }
-
+    async InlineQueryResultArticle(params){
+        return new Promise((resolve , reject) => {
+            const options = this.createOptions('InlineQueryResultArticle');
+            const req = https.request(options , (res) => {
+                res.setEncoding('utf8');
+                res.on('data' , (chunk) => {
+                    resolve(JSON.parse(chunk));
+                });
+            });
+            req.on('error' , (e) => {
+                reject (e);
+            });
+            req.end(JSON.stringify(params));
+        });
+    }
+    async InlineQueryResultPhoto(params){
+        return new Promise((resolve , reject) => {
+            const options = this.createOptions('InlineQueryResultPhoto');
+            const req = https.request(options , (res) => {
+                res.setEncoding('utf8');
+                res.on('data' , (chunk) => {
+                    resolve(JSON.parse(chunk));
+                });
+            });
+            req.on('error' , (e) => {
+                reject (e);
+            });
+            req.end(JSON.stringify(params));
+        });
+    }
+    async InlineQueryResultGif(params){
+        return new Promise((resolve , reject) => {
+            const options = this.createOptions('InlineQueryResultGif');
+            const req = https.request(options , (res) => {
+                res.setEncoding('utf8');
+                res.on('data' , (chunk) => {
+                    resolve(JSON.parse(chunk));
+                });
+            });
+            req.on('error' , (e) => {
+                reject (e);
+            });
+            req.end(JSON.stringify(params));
+        });
+    }
+    async InlineQueryResultMpeg4Gif(params){
+        return new Promise((resolve , reject) => {
+            const options = this.createOptions('InlineQueryResultMpeg4Gif');
+            const req = https.request(options , (res) => {
+                res.setEncoding('utf8');
+                res.on('data' , (chunk) => {
+                    resolve(JSON.parse(chunk));
+                });
+            });
+            req.on('error' , (e) => {
+                reject (e);
+            });
+            req.end(JSON.stringify(params));
+        });
+    }
+    async InlineQueryResultVideo(params){
+        return new Promise((resolve , reject) => {
+            const options = this.createOptions('InlineQueryResultVideo');
+            const req = https.request(options , (res) => {
+                res.setEncoding('utf8');
+                res.on('data' , (chunk) => {
+                    resolve(JSON.parse(chunk));
+                });
+            });
+            req.on('error' , (e) => {
+                reject (e);
+            });
+            req.end(JSON.stringify(params));
+        });
+    }
+    async InlineQueryResultAudio(params){
+        return new Promise((resolve , reject) => {
+            const options = this.createOptions('InlineQueryResultAudio');
+            const req = https.request(options , (res) => {
+                res.setEncoding('utf8');
+                res.on('data' , (chunk) => {
+                    resolve(JSON.parse(chunk));
+                });
+            });
+            req.on('error' , (e) => {
+                reject (e);
+            });
+            req.end(JSON.stringify(params));
+        });
+    }
+    async InlineQueryResultVoice(params){
+        return new Promise((resolve , reject) => {
+            const options = this.createOptions('InlineQueryResultVoice');
+            const req = https.request(options , (res) => {
+                res.setEncoding('utf8');
+                res.on('data' , (chunk) => {
+                    resolve(JSON.parse(chunk));
+                });
+            });
+            req.on('error' , (e) => {
+                reject (e);
+            });
+            req.end(JSON.stringify(params));
+        });
+    }
+    async InlineQueryResultDocument(params){
+        return new Promise((resolve , reject) => {
+            const options = this.createOptions('InlineQueryResultDocument');
+            const req = https.request(options , (res) => {
+                res.setEncoding('utf8');
+                res.on('data' , (chunk) => {
+                    resolve(JSON.parse(chunk));
+                });
+            });
+            req.on('error' , (e) => {
+                reject (e);
+            });
+            req.end(JSON.stringify(params));
+        });
+    }
+    async InlineQueryResultLocation(params){
+        return new Promise((resolve , reject) => {
+            const options = this.createOptions('InlineQueryResultLocation');
+            const req = https.request(options , (res) => {
+                res.setEncoding('utf8');
+                res.on('data' , (chunk) => {
+                    resolve(JSON.parse(chunk));
+                });
+            });
+            req.on('error' , (e) => {
+                reject (e);
+            });
+            req.end(JSON.stringify(params));
+        });
+    }
+    async InlineQueryResultVenue(params){
+        return new Promise((resolve , reject) => {
+            const options = this.createOptions('InlineQueryResultVenue');
+            const req = https.request(options , (res) => {
+                res.setEncoding('utf8');
+                res.on('data' , (chunk) => {
+                    resolve(JSON.parse(chunk));
+                });
+            });
+            req.on('error' , (e) => {
+                reject (e);
+            });
+            req.end(JSON.stringify(params));
+        });
+    }
+    async InlineQueryResultContact(params){
+        return new Promise((resolve , reject) => {
+            const options = this.createOptions('InlineQueryResultContact');
+            const req = https.request(options , (res) => {
+                res.setEncoding('utf8');
+                res.on('data' , (chunk) => {
+                    resolve(JSON.parse(chunk));
+                });
+            });
+            req.on('error' , (e) => {
+                reject (e);
+            });
+            req.end(JSON.stringify(params));
+        });
+    }
+    async InlineQueryResultGame(params){
+        return new Promise((resolve , reject) => {
+            const options = this.createOptions('InlineQueryResultGame');
+            const req = https.request(options , (res) => {
+                res.setEncoding('utf8');
+                res.on('data' , (chunk) => {
+                    resolve(JSON.parse(chunk));
+                });
+            });
+            req.on('error' , (e) => {
+                reject (e);
+            });
+            req.end(JSON.stringify(params));
+        });
+    }
+    async InlineQueryResultCachedPhoto(params){
+        return new Promise((resolve , reject) => {
+            const options = this.createOptions('InlineQueryResultCachedPhoto');
+            const req = https.request(options , (res) => {
+                res.setEncoding('utf8');
+                res.on('data' , (chunk) => {
+                    resolve(JSON.parse(chunk));
+                });
+            });
+            req.on('error' , (e) => {
+                reject (e);
+            });
+            req.end(JSON.stringify(params));
+        });
+    }
+    async InlineQueryResultCachedGif(params){
+        return new Promise((resolve , reject) => {
+            const options = this.createOptions('InlineQueryResultCachedGif');
+            const req = https.request(options , (res) => {
+                res.setEncoding('utf8');
+                res.on('data' , (chunk) => {
+                    resolve(JSON.parse(chunk));
+                });
+            });
+            req.on('error' , (e) => {
+                reject (e);
+            });
+            req.end(JSON.stringify(params));
+        });
+    }
+    async InlineQueryResultCachedMpeg4Gif(params){
+        return new Promise((resolve , reject) => {
+            const options = this.createOptions('InlineQueryResultCachedMpeg4Gif');
+            const req = https.request(options , (res) => {
+                res.setEncoding('utf8');
+                res.on('data' , (chunk) => {
+                    resolve(JSON.parse(chunk));
+                });
+            });
+            req.on('error' , (e) => {
+                reject (e);
+            });
+            req.end(JSON.stringify(params));
+        });
+    }
+    async InlineQueryResultCachedSticker(params){
+        return new Promise((resolve , reject) => {
+            const options = this.createOptions('InlineQueryResultCachedSticker');
+            const req = https.request(options , (res) => {
+                res.setEncoding('utf8');
+                res.on('data' , (chunk) => {
+                    resolve(JSON.parse(chunk));
+                });
+            });
+            req.on('error' , (e) => {
+                reject (e);
+            });
+            req.end(JSON.stringify(params));
+        });
+    }
+    async InlineQueryResultCachedDocument(params){
+        return new Promise((resolve , reject) => {
+            const options = this.createOptions('InlineQueryResultCachedDocument');
+            const req = https.request(options , (res) => {
+                res.setEncoding('utf8');
+                res.on('data' , (chunk) => {
+                    resolve(JSON.parse(chunk));
+                });
+            });
+            req.on('error' , (e) => {
+                reject (e);
+            });
+            req.end(JSON.stringify(params));
+        });
+    }
+    async InlineQueryResultCachedVideo(params){
+        return new Promise((resolve , reject) => {
+            const options = this.createOptions('InlineQueryResultCachedVideo');
+            const req = https.request(options , (res) => {
+                res.setEncoding('utf8');
+                res.on('data' , (chunk) => {
+                    resolve(JSON.parse(chunk));
+                });
+            });
+            req.on('error' , (e) => {
+                reject (e);
+            });
+            req.end(JSON.stringify(params));
+        });
+    }
+    async InlineQueryResultCachedVoice(params){
+        return new Promise((resolve , reject) => {
+            const options = this.createOptions('InlineQueryResultCachedVoice');
+            const req = https.request(options , (res) => {
+                res.setEncoding('utf8');
+                res.on('data' , (chunk) => {
+                    resolve(JSON.parse(chunk));
+                });
+            });
+            req.on('error' , (e) => {
+                reject (e);
+            });
+            req.end(JSON.stringify(params));
+        });
+    }
+    async InlineQueryResultCachedAudio(params){
+        return new Promise((resolve , reject) => {
+            const options = this.createOptions('InlineQueryResultCachedAudio');
+            const req = https.request(options , (res) => {
+                res.setEncoding('utf8');
+                res.on('data' , (chunk) => {
+                    resolve(JSON.parse(chunk));
+                });
+            });
+            req.on('error' , (e) => {
+                reject (e);
+            });
+            req.end(JSON.stringify(params));
+        });
+    }
+    async InputTextMessageContent(params){
+        return new Promise((resolve , reject) => {
+            const options = this.createOptions('InputTextMessageContent');
+            const req = https.request(options , (res) => {
+                res.setEncoding('utf8');
+                res.on('data' , (chunk) => {
+                    resolve(JSON.parse(chunk));
+                });
+            });
+            req.on('error' , (e) => {
+                reject (e);
+            });
+            req.end(JSON.stringify(params));
+        });
+    }
+    async InputLocationMessageContent(params){
+        return new Promise((resolve , reject) => {
+            const options = this.createOptions('InputLocationMessageContent');
+            const req = https.request(options , (res) => {
+                res.setEncoding('utf8');
+                res.on('data' , (chunk) => {
+                    resolve(JSON.parse(chunk));
+                });
+            });
+            req.on('error' , (e) => {
+                reject (e);
+            });
+            req.end(JSON.stringify(params));
+        });
+    }
+    async InputVenueMessageContent(params){
+        return new Promise((resolve , reject) => {
+            const options = this.createOptions('InputVenueMessageContent');
+            const req = https.request(options , (res) => {
+                res.setEncoding('utf8');
+                res.on('data' , (chunk) => {
+                    resolve(JSON.parse(chunk));
+                });
+            });
+            req.on('error' , (e) => {
+                reject (e);
+            });
+            req.end(JSON.stringify(params));
+        });
+    }
+    async InputContactMessageContent(params){
+        return new Promise((resolve , reject) => {
+            const options = this.createOptions('InputContactMessageContent');
+            const req = https.request(options , (res) => {
+                res.setEncoding('utf8');
+                res.on('data' , (chunk) => {
+                    resolve(JSON.parse(chunk));
+                });
+            });
+            req.on('error' , (e) => {
+                reject (e);
+            });
+            req.end(JSON.stringify(params));
+        });
+    }
+    async ChosenInlineResult(params){
+        return new Promise((resolve , reject) => {
+            const options = this.createOptions('ChosenInlineResult');
+            const req = https.request(options , (res) => {
+                res.setEncoding('utf8');
+                res.on('data' , (chunk) => {
+                    resolve(JSON.parse(chunk));
+                });
+            });
+            req.on('error' , (e) => {
+                reject (e);
+            });
+            req.end(JSON.stringify(params));
+        });
+    }
 }
 
 
