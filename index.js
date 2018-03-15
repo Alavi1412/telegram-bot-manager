@@ -947,6 +947,27 @@ class Bot {
         });
     }
 
+    async answerInlineQuery(params){
+        return new Promise((resolve , reject) => {
+            if (!params['inline_query_id']) {
+                reject("inline_query_id is empty!");
+            }
+            if (!params['results']) {
+                reject("results is empty!");
+            }
+            const options = this.createOptions('answerInlineQuery');
+            const req = https.request(options , (res) => {
+                res.setEncoding('utf8');
+                res.on('data' , (chunk) => {
+                    resolve(JSON.parse(chunk));
+                });
+            });
+            req.on('error' , (e) => {
+                reject (e);
+            });
+            req.end(JSON.stringify(params));
+        });
+    }
 
 }
 

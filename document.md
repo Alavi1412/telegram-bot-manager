@@ -536,5 +536,19 @@ message_id (*required*) :  Integer  ,\
 
 Returns Boolean
 
+### [answerInlineQuery](https://core.telegram.org/bots/api#answerInlineQuery)
+
+Input:
+
+inline_query_id (*required*) :  String ,\
+results (*required*) :  Array of InlineQueryResult  ,\
+cache_time : Integer ,\
+is_personal : Boolean ,\
+next_offset : Integer ,\
+switch_pm_text : string .\
+switch_pm_parameter : string ,\
+
+Returns Boolean
+
 
 #### [The   End](https://core.telegram.org/bots/api)
