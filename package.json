@@ -1,7 +1,7 @@
 {
   "auhtor": "Seyed Mohammad Hassan Alavi",
   "name": "telegram-bot-manager",
-  "version": "1.2.0",
+  "version": "1.2,1",
   "description": "This is a package to help developers to connect to telegram server and use telegram BOT API",
   "main": "index.js",
   "scripts": {
