@@ -44,6 +44,7 @@ text : "this a test bot"
 ```
 ### Authors
 
+* [**Hassan Golchin**](http://t.me/golchin1100)
 * [**Seyed Mohammad Hasan Alavi**](http://t.me/alavi1412)
 * [**Hossein Keramati Tavallaei**](http://t.me/hooo3eeen)
 
