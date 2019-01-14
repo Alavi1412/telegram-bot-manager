@@ -53,3 +53,6 @@ This project is licensed under the MIT License.
 
 ### Acknowledgments
 All of the telegram's bot developers.
+
+### Feedback
+We are glad to hear about your feedbacks, usages and problems to enhance the package. You can directly message the authors in Telegram Massenger or creating issue here.
